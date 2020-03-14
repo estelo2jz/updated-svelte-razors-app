@@ -15,7 +15,7 @@
     on:click="{()=>{
       openSidebar('sidebar', true)
     }}">
-      <SidebarIcon size="24" pointer="cursor" />
+      <SidebarIcon size="24" />
     </button>
     <!-- logo -->
     <a href="/" use:link class="nav-logo">
