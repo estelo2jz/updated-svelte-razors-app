@@ -13,10 +13,13 @@
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-feather-icons": "^3.2.2"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4",
+    "svelte-fa": "^2.1.1",
+    "svelte-icon": "^1.0.1",
     "svelte-icons": "^2.1.0",
     "svelte-routing": "^1.4.2"
   }

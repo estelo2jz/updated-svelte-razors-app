@@ -1,25 +1,18 @@
 <script>
   import globalStore from '../../stores/globalStore';
-  import FaShoppingCart from 'svelte-icons/fa/FaShoppingCart.svelte';
+  import { ArchiveIcon } from 'svelte-feather-icons';
 </script>
 
 <!-- cart toggle -->
-<div class="btn-cart-container icon">
+<div class="btn-cart-container">
   <button 
-    class="btn-cart-toggle" 
+    class="btn-cart-toggle icon" 
     on:click={() => {
       console.log('hello');
       globalStore.toggleItem('cart', true);
     }}>
-    <FaShoppingCart />
+    <i class="fas fa-cart" />
+    <ArchiveIcon size="24" />
   </button>
   <span class="btn-cart-items">100</span>
 </div>
-
-<style>
-  .icon {
-    color: red;
-    width: 312px;
-    height: 312px;
-  }
-</style>

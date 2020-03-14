@@ -5,6 +5,7 @@
   import {fly, fade} from 'svelte/transition';
 </script>
 
+
 <div class="sidebar-container" transition:fly={{ x:-1000 }} >
   <div class="sidebar" transition:fade={{ delay:400 }}>
     <!-- header -->

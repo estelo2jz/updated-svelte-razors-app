@@ -2,6 +2,7 @@
   // cart button
   import CartButton from '../Cart/CartButton.svelte';
   import { link } from 'svelte-routing';
+  import { SidebarIcon } from 'svelte-feather-icons';
   // global store
   import globalStore from '../../stores/globalStore';
   let openSidebar = globalStore.toggleItem;
@@ -14,7 +15,7 @@
     on:click="{()=>{
       openSidebar('sidebar', true)
     }}">
-      <i class="fas fa-bars" />
+      <SidebarIcon size="24" pointer="cursor" />
     </button>
     <!-- logo -->
     <a href="/" use:link class="nav-logo">
