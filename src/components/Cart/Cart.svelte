@@ -11,7 +11,7 @@
    <div class="cart-container" transition:fly={{x:100}}>
       <div class="cart" transition:fade={{delay:400}}>
       <!-- cart header -->
-        <div class="">
+        <div class="cart-header">
           <button class="btn-close" on:click="{()=>{
             globalStore.toggleItem('cart', false);
           }}">
