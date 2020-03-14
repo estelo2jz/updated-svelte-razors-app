@@ -2,7 +2,7 @@
   // cart button
   import CartButton from '../Cart/CartButton.svelte';
   import { link } from 'svelte-routing';
-  import { XIcon } from 'svelte-feather-icons';
+  import { SidebarIcon } from 'svelte-feather-icons';
   // global store
   import globalStore from '../../stores/globalStore';
   let openSidebar = globalStore.toggleItem;
@@ -15,7 +15,7 @@
     on:click="{()=>{
       openSidebar('sidebar', true)
     }}">
-      <XIcon size="24" />
+      <SidebarIcon size="24" />
     </button>
     <!-- logo -->
     <a href="/" use:link class="nav-logo">

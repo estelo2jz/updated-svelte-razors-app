@@ -3,7 +3,7 @@
   import { link } from 'svelte-routing';
   import globalStore from '../../stores/globalStore';
   import {fly, fade} from 'svelte/transition';
-  import { SidebarIcon } from 'svelte-feather-icons';
+  import { XIcon } from 'svelte-feather-icons';
 </script>
 
 
@@ -15,7 +15,7 @@
       on:click="{()=>{
         globalStore.toggleItem('sidebar', false);
       }}">
-        <SidebarIcon size="24" />
+        <XIcon size="24" />
       </button>
     </div>
     <!-- site logo -->
