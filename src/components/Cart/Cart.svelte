@@ -3,7 +3,7 @@
   import { fly, fade, blur} from 'svelte/transition';
   import { link } from 'svelte-routing';
   import { XIcon } from 'svelte-feather-icons';
-  // itemlist
+  import ItemsList from './ItemsList.svelte';
   let user = false;
 </script>
 
@@ -22,7 +22,7 @@
         </div>
       <!-- end cart header -->
       <!-- cart items -->
-      <p>cart items</p>
+      <ItemsList />
       <!-- end cart items -->
       <!-- cart footer -->
       <div class="cart-footer">
