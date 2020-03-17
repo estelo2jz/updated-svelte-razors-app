@@ -4,7 +4,7 @@
   import { link } from 'svelte-routing';
   import { XIcon } from 'svelte-feather-icons';
   import ItemsList from './ItemsList.svelte';
-  let user = false;
+  import user from '../../stores/user';
 </script>
 
 <div class="cart-overlay" transition:blur>
@@ -26,7 +26,7 @@
       <!-- end cart items -->
       <!-- cart footer -->
       <div class="cart-footer">
-        {#if user}
+        {#if $user.jwt}
           <a href="/checkout" use:link class="btn btn-primary btn-block"
             on:click={()=>{
             globalStore.toggleItem('cart', false);

@@ -4,6 +4,8 @@
   import globalStore from '../../stores/globalStore';
   import {fly, fade} from 'svelte/transition';
   import { XIcon } from 'svelte-feather-icons';
+  import LoginLink from '../LoginLink.svelte';
+
 </script>
 
 
@@ -31,6 +33,9 @@
             >{sideLink.text}</a>
           </li>
         {/each}
+        <li>
+          <LoginLink />
+        </li>
       </ul>
   </div>
 </div>
