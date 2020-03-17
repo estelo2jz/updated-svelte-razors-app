@@ -1,5 +1,5 @@
 <script>
-  import user from '../../stores/user';
+  import user from '../stores/user';
   import { link } from 'svelte-routing';
   // logout func
   import globalStore from '../stores/globalStore';
