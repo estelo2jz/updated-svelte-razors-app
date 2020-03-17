@@ -5,6 +5,7 @@
   export let price;
   export let amount;
   // import cart methods
+  import { removeItem, increaseAmount } from '../../stores/cart';
   // icons
   import { ChevronUpIcon, ChevronDownIcon } from 'svelte-feather-icons';
 </script>
@@ -15,15 +16,17 @@
   <div>
     <h4>{title}</h4>
     <h5>${price}</h5>
-    <button class="cart=btn remove-btn" on:click="{()=>{
-      console.log('remove item')
+    <button 
+      class="cart=btn remove-btn" 
+      on:click="{()=>{
+        removeItem(id)
     }}">
       remove
     </button>
   </div>
   <div>
     <button class="cart=btn amount-btn" on:click="{()=>{
-      console.log('increase item')
+      increaseAmount(id);
     }}">
       <ChevronUpIcon size="24" />
     </button>
