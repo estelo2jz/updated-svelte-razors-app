@@ -17,6 +17,7 @@
     "svelte-feather-icons": "^3.2.2"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "sirv-cli": "^0.4.4",
     "svelte-fa": "^2.1.1",
     "svelte-icon": "^1.0.1",
