@@ -20,7 +20,7 @@
   <section class="single-product">
     <!-- back to product -->
     <a href="/products" use:link class="btn btn-primary">
-      back to products okay
+      back to products
     </a>
     <!-- single product container -->
     <div class="single-product-container">

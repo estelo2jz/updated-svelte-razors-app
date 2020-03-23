@@ -17,7 +17,7 @@
     <h4>{title}</h4>
     <h5>${price}</h5>
     <button 
-      class="cart=btn remove-btn" 
+      class="cart-btn remove-btn" 
       on:click="{()=>{
         removeItem(id)
     }}">
@@ -25,13 +25,13 @@
     </button>
   </div>
   <div>
-    <button class="cart=btn amount-btn" on:click="{()=>{
+    <button class="cart-btn amount-btn" on:click="{()=>{
       increaseAmount(id);
     }}">
       <ChevronUpIcon size="24" />
     </button>
     <p class="item-amount">{amount}</p>
-    <button class="cart=btn amount-btn" on:click="{()=>{
+    <button class="cart-btn amount-btn " on:click="{()=>{
       decreaseAmount(id, amount);
     }}">
       <ChevronDownIcon size="24" />

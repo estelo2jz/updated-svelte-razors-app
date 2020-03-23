@@ -15,7 +15,8 @@
     on:click={() => {
       globalStore.toggleItem('cart', true);
     }}>
-    <ArchiveIcon size="24" />
+    <ArchiveIcon 
+      size="24" />
   </button>
   <span class="btn-cart-items">{total}</span>
 </div>

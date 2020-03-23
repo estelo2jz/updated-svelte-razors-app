@@ -2,7 +2,8 @@
   import { onMount } from 'svelte';
   import { navigate, link } from 'svelte-routing';
   import user from '../stores/user';
-  import { cartTotal } from '../stores/cart';
+  import cart, { cartTotal } from '../stores/cart';
+  import submitOrder from '../strapi/submitOrder';
 
   let location = '';
   let name = '';
@@ -15,14 +16,52 @@
 
   // is Empty
   $: isEmpty = !name;
+
   onMount(() => {
     if(!$user.jwt) {
       navigate("/");
+      return;
+    }
+
+    if ($cartTotal > 0) {
+      stripe = Stripe("pk_test_qGGG5JJJzyzaFuIDsM7D7Nq700zdXqyxAe");
+      elements = stripe.elements();
+      card = elements.create('card');
+      card.mount(cardElement);
+      card.addEventListener("change", function(event) {
+
+        if (event.error) {
+          cardErrors.textContent = event.error.message;
+        } else {
+          cardErrors.textContent = "";
+        }
+      });
     }
   });
-  function handleSubmit() {
-    console.log('form submitted');
+
+  async function handleSubmit() {
+    let response = await stripe
+      .createToken(card)
+      .catch(error => console.log(error));
+    const {token} = response;
+
+    if (token) {
+      const {id} = token;
+      let order = await submitOrder({
+        name,
+        total: $cartTotal, 
+        items: $cart, 
+        stripeTokenId: id,
+        userToken: $user.jwt,
+      });
+      console.log(order);
+      
+      // token.id
+      // submit the order
+    } else {
+    }
   }
+
 </script>
 
 {#if $cartTotal > 0}
@@ -42,7 +81,7 @@
       <div class="stripe-input">
         <!-- info -->
         <label for="card-element">Credit or Debit Card</label>
-        <p> 
+        <p class="stripe-info"> 
           Test using this credit card:
           <span>4242 4242 4242 4242</span>
           <br />
