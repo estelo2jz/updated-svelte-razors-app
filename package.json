@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "sirv-cli": "^0.4.4",
+    "strapi-provider-upload-cloudinary": "^3.0.0-beta.19.3",
     "stripe": "^8.33.0",
     "svelte-fa": "^2.1.1",
     "svelte-icon": "^1.0.1",
