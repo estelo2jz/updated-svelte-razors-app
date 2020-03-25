@@ -104,7 +104,7 @@
           <br />
           enter any 3 digits for the CVC
         </p>
-        <div id="card-element" bind:this={cardElement}>
+        <div class="card-element" bind:this={cardElement}>
         <!-- stripe -->
         </div>
         <div id="card-errors" bind:this={cardErrors} role="alert" />
